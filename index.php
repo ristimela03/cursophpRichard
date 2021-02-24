@@ -1,3 +1,17 @@
+// para todos
+session_start();
+
+$productos = array();
+$archivos = array_diff (scandir("productos/"), array('.','..'));
+
+foreach ($archivos as $archivo) {
+    $archivoProducto = file_get_contents("productos/$archivo");
+    $arrayProducto = explode("\n",$archivoProducto);
+    $productos[]=$arrayProducto;  
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +43,18 @@
               <li><a href="products.html">Products</a></li>
               <li><a href="">About</a></li>
               <li><a href="">Contact</a></li>
-              <li><a href="account.html">Account</a></li>
+              <li><?php 
+
+              if (isset($_SESSION['logueado']) && isset($_SESSION['username'])){
+                $usernameLogueado = $_SESSION['username'];
+                echo "<a href='profile.html'>Bienvenido $usernameLogueado </a>";
+              }else {
+                echo '<a href="account.php">Account</a>';
+              }
+              
+              ?> 
+            
+            </li>
               <!-- TODo: 22:20 -->
             </ul>
           </nav>
@@ -61,7 +86,7 @@
         </div>
       </div>
     </div>
-    <!----- Featurd Categories--------->
+    <!----- Featurd Categories
     <div class="categories">
       <div class="small-container">
         <div class="row">
@@ -77,7 +102,7 @@
         </div>
       </div>
     </div>
-    <!----- Featurd Products--------->
+     Featurd Products
     <div class="small-container">
       <h2 class="title">Featured Products</h2>
       <div class="row">
@@ -95,7 +120,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-2.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -108,7 +132,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-3.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -134,11 +157,18 @@
           <p>$50.00</p>
         </div>
       </div>
+      --------->
+      <div class="small-container">
       <h2 class="title">Latest Products</h2>
       <div class="row">
+
+      <?php foreach($productos as $prod) {?>
         <div class="col-4">
-          <img src="images/product-5.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
+          <img src="images/<?php echo $prod[4]; ?>" alt="" />
+          <h4>
+            <a href="<?php echo "product-details.php?id=".$prod[0]; ?> "> <?php echo $prod[1]; ?> </a>
+
+        </h4>
           <div class="rating">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -146,98 +176,12 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star-o"></i>
           </div>
-          <p>$50.00</p>
+          <p>$<?php echo $prod[2]; ?></p>
         </div>
 
-        <div class="col-4">
-          <img src="images/product-6.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
+      <?php } ?>
+        
 
-        <div class="col-4">
-          <img src="images/product-7.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="images/product-8.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4">
-          <img src="images/product-9.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-10.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-
-        <div class="col-4">
-          <img src="images/product-11.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <img src="images/product-12.jpg" alt="" />
-          <h4>Red Printed T-shirt</h4>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
       </div>
     </div>
 

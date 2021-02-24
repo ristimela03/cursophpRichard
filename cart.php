@@ -43,7 +43,6 @@
         />
       </div>
     </div>
-
     <!-- Cart Items Details -->
     <div class="small-container cart-page">
       <table>
@@ -67,7 +66,6 @@
           <td><input type="nunber" value="1" /></td>
           <td>$50.00</td>
         </tr>
-
         <tr>
           <td>
             <div class="cart-info">
@@ -83,7 +81,6 @@
           <td><input type="nunber" value="1" /></td>
           <td>$50.00</td>
         </tr>
-
         <tr>
           <td>
             <div class="cart-info">
@@ -100,7 +97,6 @@
           <td>$50.00</td>
         </tr>
       </table>
-
       <div class="total-price">
         <table>
           <tr>
@@ -149,7 +145,6 @@
               <li>Join Affiliate</li>
             </ul>
           </div>
-
           <div class="footer-col-4">
             <h3>Follow us</h3>
             <ul>
@@ -167,9 +162,7 @@
     <!-- JS for Toggle menu -->
     <script>
       var MenuItems = document.getElementById("MenuItems");
-
       MenuItems.style.maxHeight = "0px";
-
       function menutoggle() {
         if (MenuItems.style.maxHeight == "0px") {
           MenuItems.style.maxHeight = "200px";

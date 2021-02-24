@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,13 +44,11 @@
         />
       </div>
     </div>
-
     <!-- Single Products Detail -->
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
           <img src="images/gallery-1.jpg" width="100%" id="ProductImg" />
-
           <div class="small-img-row">
             <div class="small-img-col">
               <img src="images/gallery-1.jpg" class="small-img" />
@@ -89,7 +88,6 @@
         </div>
       </div>
     </div>
-
     <!-- Title -->
     <div class="small-container">
       <div class="row row-2">
@@ -97,9 +95,7 @@
         <p>View More</p>
       </div>
     </div>
-
     <!-- Similar Products -->
-
     <div class="small-container">
       <div class="row">
         <div class="col-4">
@@ -114,7 +110,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-10.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -127,7 +122,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-11.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -154,7 +148,6 @@
         </div>
       </div>
     </div>
-
     <!-- Footer -->
     <div class="footer">
       <div class="container">
@@ -186,7 +179,6 @@
               <li>Join Affiliate</li>
             </ul>
           </div>
-
           <div class="footer-col-4">
             <h3>Follow us</h3>
             <ul>
@@ -204,9 +196,7 @@
     <!-- JS for Toggle menu -->
     <script>
       var MenuItems = document.getElementById("MenuItems");
-
       MenuItems.style.maxHeight = "0px";
-
       function menutoggle() {
         if (MenuItems.style.maxHeight == "0px") {
           MenuItems.style.maxHeight = "200px";
@@ -215,7 +205,6 @@
         }
       }
     </script>
-
     <!-- js for product gallery -->
     <script>
       var ProductImg = document.getElementById("ProductImg");

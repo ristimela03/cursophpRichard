@@ -43,7 +43,6 @@
         />
       </div>
     </div>
-
     <div class="small-container">
       <div class="row row-2">
         <h2>All Products</h2>
@@ -55,7 +54,6 @@
           <option value="">Sort by sales</option>
         </select>
       </div>
-
       <div class="row">
         <div class="col-4">
           <img src="images/product-1.jpg" alt="" />
@@ -69,7 +67,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-2.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -82,7 +79,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-3.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -121,7 +117,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-6.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -134,7 +129,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-7.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -173,7 +167,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-10.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -186,7 +179,6 @@
           </div>
           <p>$50.00</p>
         </div>
-
         <div class="col-4">
           <img src="images/product-11.jpg" alt="" />
           <h4>Red Printed T-shirt</h4>
@@ -212,7 +204,6 @@
           <p>$50.00</p>
         </div>
       </div>
-
       <div class="page-btn">
         <span>1</span>
         <span>2</span>
@@ -221,7 +212,6 @@
         <span>&#8594;</span>
       </div>
     </div>
-
     <!-- Footer -->
     <div class="footer">
       <div class="container">
@@ -253,7 +243,6 @@
               <li>Join Affiliate</li>
             </ul>
           </div>
-
           <div class="footer-col-4">
             <h3>Follow us</h3>
             <ul>
@@ -271,9 +260,7 @@
     <!-- JS for Toggle menu -->
     <script>
       var MenuItems = document.getElementById("MenuItems");
-
       MenuItems.style.maxHeight = "0px";
-
       function menutoggle() {
         if (MenuItems.style.maxHeight == "0px") {
           MenuItems.style.maxHeight = "200px";
